@@ -1,6 +1,5 @@
 import React from 'react'
-import { SafeAreaView, Text } from 'react-native'
-import { StyleSheet } from 'react-native';
+import { StyleSheet, SafeAreaView, Text } from 'react-native'
 
 export default function FavoriteScreen() {
   return (
