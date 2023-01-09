@@ -1,10 +1,13 @@
 import React from 'react'
-import { StyleSheet, FlatList } from 'react-native'
+import { StyleSheet, FlatList, ActivityIndicator } from 'react-native'
 import PokemonCard from './PokemonCard'
 
 export default function pokemonList(props) {
-  const { pokemons } = props
-  // console.log(pokemons)
+  const { pokemons, loadPokemons, isNext } = props
+
+  const loadMore = () => {
+    loadPokemons();
+  }
 
   return (
     <FlatList
@@ -14,6 +17,17 @@ export default function pokemonList(props) {
       keyExtractor={(pokemon) => String(pokemon.id)}
       renderItem={({item}) => <PokemonCard pokemon={item}></PokemonCard>}
       contentContainerStyle={styles.flatListContentContainer}
+      onEndReached={isNext && loadMore}
+      onEndReachedThreshold={0.1}
+      ListFooterComponent={
+        isNext && (
+          <ActivityIndicator
+            size="large"
+            style={styles.spinner}
+            color="#aeaeae"
+          />
+        )
+      }
     ></FlatList>
   )
 }
@@ -21,5 +35,9 @@ export default function pokemonList(props) {
 const styles = StyleSheet.create({
   flatListContentContainer: {
     paddingHorizontal: 5
-  }
+  },
+  spinner: {
+    marginTop: 20,
+    marginBottom: 60,
+  },
 })
