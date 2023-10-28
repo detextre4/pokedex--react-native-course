@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
-import FontAwesome from "react-native-vector-icons/FontAwesome";
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 import {
   addPokemonFavoriteApi,
   isPokemonFavoriteApi,

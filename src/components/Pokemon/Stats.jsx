@@ -1,6 +1,6 @@
-import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
-import { map } from 'lodash'
+import React from 'react';
+import {StyleSheet, View, Text} from 'react-native';
+import {map} from 'lodash';
 
 export default function Stats(props) {
   const { stats } = props
