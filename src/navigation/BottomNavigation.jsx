@@ -2,9 +2,9 @@ import React from 'react'
 import { Image } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import AccountNavigation from '../navigation/AccountNavigation'
-import FavoriteNavigation from '../navigation/FavoriteNavigation'
-import PokedexNavigation from '../navigation/PokedexNavigation'
+import AccountNavigation from './AccountNavigation'
+import FavoriteNavigation from './FavoriteNavigation'
+import PokedexNavigation from './PokedexNavigation'
 // import PokedexScreen from '../screens/PokedexScreen';
 
 const Tab = createBottomTabNavigator();
